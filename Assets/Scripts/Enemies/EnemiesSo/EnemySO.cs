@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemySO : ScriptableObject
+[CreateAssetMenu(fileName = "New Enemy", menuName = "ScriptableObjects/Enemies/Enemy")]
+public class EnemySO : ScriptableObject
 {
     public string enemyName;
-    public int enemyHealth;
+    [SerializeField] public Transform enemyPrefab;
     public Sprite enemySprite;
-    public Transform enemyPosition;
-
-    public virtual void EnemyAttack()
-    {
-        
-    }
 }
