@@ -6,8 +6,8 @@ using TMPro;
 [CreateAssetMenu(fileName = "Health System", menuName = "ScriptableObjects/Systems/Health")]
 public class HealthSystem : ScriptableObject
 {
-    [SerializeField] public int health { get; private set; } = 100;
-    [SerializeField] public int maxHealth { get; private set; } = 100;
+    [SerializeField] public int health { get; private set; } = 10;
+    [SerializeField] public int maxHealth { get; private set; } = 10;
 
     [System.NonSerialized] public UnityEvent<int> healthChangeEvent;
 
@@ -15,6 +15,7 @@ public class HealthSystem : ScriptableObject
 
     private Transform barTransform;
     private TextMeshPro healthBarText;
+    private Transform currentBorder;
 
     private void OnEnable()
     {
@@ -33,6 +34,7 @@ public class HealthSystem : ScriptableObject
             GameObject healthBarInstance = Instantiate(healthBarPrefab, parentTransform);
             barTransform = healthBarInstance.transform.Find("Bar");
             healthBarText = healthBarInstance.transform.Find("HealthText").GetComponent<TextMeshPro>();
+            currentBorder = healthBarInstance.transform.Find("Current Border");
         }
     }
 
@@ -65,6 +67,14 @@ public class HealthSystem : ScriptableObject
 
             // Update the health text
             healthBarText.text = $"{health}/{maxHealth}";
+        }
+    }
+    
+    public void SetCurrentBorderActive(bool isActive)
+    {
+        if (currentBorder != null)
+        {
+            currentBorder.gameObject.SetActive(isActive);
         }
     }
 }

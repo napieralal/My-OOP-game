@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamagable
+public class Enemy : MonoBehaviour, IDamagable, IClickable
 {
     public EnemySO enemyData;
     public HealthSystem baseHealthSystem;
     public HealthSystem healthSystem;
 
-    private void Start()
+    private void Awake()
     {
         healthSystem = Instantiate(baseHealthSystem);
         healthSystem.healthChangeEvent.AddListener(OnHealthChanged);
@@ -47,5 +47,13 @@ public class Enemy : MonoBehaviour, IDamagable
     private void OnDestroy()
     {
         healthSystem.healthChangeEvent.RemoveListener(OnHealthChanged);
+    }
+    
+    public void OnClick()
+    {
+        if (GameController.Instance.enemyManager.GetCurrentEnemy() != this)
+        {
+            GameController.Instance.enemyManager.SetCurrentEnemy(this);
+        }
     }
 }

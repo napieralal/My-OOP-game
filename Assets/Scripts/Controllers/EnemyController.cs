@@ -12,7 +12,14 @@ public class EnemyController : MonoBehaviour
 
     public void SetCurrentEnemy(Enemy enemy)
     {
+        if (currentEnemy != null)
+        {
+            currentEnemy.healthSystem.SetCurrentBorderActive(false);
+        }
+        
         currentEnemy = enemy;
+        
+        currentEnemy.healthSystem.SetCurrentBorderActive(true);
     }
 
     public Enemy GetCurrentEnemy()

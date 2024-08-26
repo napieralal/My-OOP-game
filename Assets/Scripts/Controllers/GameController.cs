@@ -73,11 +73,22 @@ public class GameController : Singleton<GameController>
     public void EndTurn()
     {
         cardManager.DiscardHand();
+        cardManager.DrawCards(5);
+        cardManager.UpdateHandDisplay();
         //cardManager.DrawCards(5);
         //cardManager.UpdateHandDisplay();
         //cardManager.SpawnHand(spawnPoints);
         //cardManager.DrawCards(5);
     }
+    
+    //select enemy
+    //player 
+    //game turn
+    //card effects
+    //room change/management
+    //boss room
+    //adding new cards to deck
+    //visuals
     
     // scene 0 - Menu
     // scene 1 - Base/City/Camp

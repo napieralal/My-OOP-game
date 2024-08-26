@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Shield Up
   cardPrefab: {fileID: 345337910771762853, guid: b35908c1e6bcf8a43b4f05cecb1f8416, type: 3}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: 1667955fff4e1a141a5a99428fc35767, type: 3}
   cardCost: 0
   cardDesc: you bring your shield up!
   cardAction: Defense +2

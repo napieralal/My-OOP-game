@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Recover
   cardPrefab: {fileID: 345337910771762853, guid: b35908c1e6bcf8a43b4f05cecb1f8416, type: 3}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 21300000, guid: 411f88b287eb8504aa08edb04c1443c6, type: 3}
   cardCost: 0
   cardDesc: You recover your wounds!
   cardAction: Health +1

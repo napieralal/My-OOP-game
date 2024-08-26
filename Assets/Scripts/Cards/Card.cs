@@ -38,7 +38,7 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         nameText.text = cardData.cardName;
         if (cardData.cardImage != null)
         {
-            cardImage.sprite = TextureToSprite(cardData.cardImage);
+            cardImage.sprite = cardData.cardImage;
         }
         CheckCost();
         if (cardData.cardDesc != null)

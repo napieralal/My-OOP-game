@@ -10,7 +10,7 @@ public class CardSO : ScriptableObject
 {
     [SerializeField] public string cardName;
     [SerializeField] public Transform cardPrefab;
-    [SerializeField] public Texture2D cardImage;
+    [SerializeField] public Sprite cardImage;
     [SerializeField] public int cardCost;
     [SerializeField] public string cardDesc;
     [SerializeField] public string cardAction;

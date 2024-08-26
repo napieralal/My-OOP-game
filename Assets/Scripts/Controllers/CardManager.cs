@@ -66,8 +66,6 @@ public class CardManager : MonoBehaviour
         discardPile.AddRange(playerHand);
         playerHand.Clear();
         UpdateDiscardPileDisplay();
-        DrawCards(5);
-        UpdateHandDisplay();
     }
 
     public void DiscardCard(CardSO card)

@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbaddd6ed79e474cb780279f065b6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardData: {fileID: 0}
   nameText: {fileID: 1059597653690918597}
   cardImage: {fileID: 6137965831843328147}
   costText: {fileID: 4244932824930044495}
@@ -231,6 +232,8 @@ MonoBehaviour:
   specialText: {fileID: 6055519062282564525}
   costBorder: {fileID: 3716658694753712957}
   specialBorder: {fileID: 216955832551513193}
+  moveDuration: 0.5
+  hoverDelay: 0.05
 --- !u!1 &738022511374374537
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8584906, g: 0.505607, b: 0.11743506, a: 0.8156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
