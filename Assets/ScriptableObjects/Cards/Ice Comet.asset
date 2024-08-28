@@ -20,4 +20,5 @@ MonoBehaviour:
   cardAction: Attack +1<br>Ice Attack +1
   cardSpecial: 0
   cardEffects:
+  - {fileID: 11400000, guid: af7387235369d8740b0bf886a7dbef14, type: 2}
   - {fileID: 11400000, guid: fecffc2e84d015f48b044dc851917ac1, type: 2}

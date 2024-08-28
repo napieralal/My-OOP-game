@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Medium Damage Effect
   m_EditorClassIdentifier: 
   damageAmount: 2
+  damageType: {fileID: 11400000, guid: 9d0251b659a3a994e9a3a6410f01cd66, type: 2}

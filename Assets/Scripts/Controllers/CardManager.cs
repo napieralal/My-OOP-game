@@ -25,6 +25,11 @@ public class CardManager : MonoBehaviour
         UpdateDiscardPileDisplay();
     }
     
+    public bool IsHandEmpty()
+    {
+        return playerHand.Count == 0;
+    }
+    
     public void CreateCard(CardSO cardSO, Transform spawnPoint)
     {
         Transform cardTransform = Instantiate(cardSO.cardPrefab, spawnPoint.position, spawnPoint.rotation, spawnPoint);

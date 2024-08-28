@@ -17,21 +17,6 @@ public class CardSO : ScriptableObject
     [SerializeField] public int cardSpecial;
     [SerializeField] public List<CardEffectSO> cardEffects = new List<CardEffectSO>();
     
-    void PlayCard()
-    {
-        // resolve effects
-        //go to discard pile (if card says its destroyed then destroy it)
-    }
-
-    void Attack()
-    {
-        
-    }
-
-    void Defense()
-    {
-        
-    }
 
     void Move()
     {
@@ -40,12 +25,7 @@ public class CardSO : ScriptableObject
 
     void DrawCard()
     {
-        
-    }
-
-    void Heal()
-    {
-        
+        // w sensie zmien ta karte na inna
     }
 
     void GetItem()

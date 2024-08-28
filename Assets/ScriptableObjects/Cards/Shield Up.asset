@@ -19,4 +19,5 @@ MonoBehaviour:
   cardDesc: you bring your shield up!
   cardAction: Defense +2
   cardSpecial: 0
-  cardEffects: []
+  cardEffects:
+  - {fileID: 11400000, guid: d710cdfe005007045921e1aa52611504, type: 2}

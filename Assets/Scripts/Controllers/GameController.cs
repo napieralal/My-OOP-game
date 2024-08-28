@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameController : Singleton<GameController>
 {
@@ -52,6 +53,10 @@ public class GameController : Singleton<GameController>
             }
         }
         
+        if (cardManager.IsHandEmpty())
+        {
+            EndTurn();
+        }
     }
     
     void InitializeDeck()
@@ -73,15 +78,17 @@ public class GameController : Singleton<GameController>
     public void EndTurn()
     {
         cardManager.DiscardHand();
+        enemyManager.DealDamageToPlayer();
+        StartTurn();
+    }
+
+    public void StartTurn()
+    {
         cardManager.DrawCards(5);
         cardManager.UpdateHandDisplay();
-        //cardManager.DrawCards(5);
-        //cardManager.UpdateHandDisplay();
-        //cardManager.SpawnHand(spawnPoints);
-        //cardManager.DrawCards(5);
+        //EventSystem.current.SetSelectedGameObject (null);
     }
     
-    //select enemy
     //player 
     //game turn
     //card effects
@@ -89,6 +96,7 @@ public class GameController : Singleton<GameController>
     //boss room
     //adding new cards to deck
     //visuals
+    //item with revives you (very expensive max 1 maybe)
     
     // scene 0 - Menu
     // scene 1 - Base/City/Camp

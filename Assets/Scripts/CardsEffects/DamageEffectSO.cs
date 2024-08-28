@@ -9,12 +9,15 @@ public class DamageEffectSO : CardEffectSO
     private int damageAmount;
     //plus jakies inne modyfikatory
     
+    [SerializeField]
+    private DamageTypeSO damageType;
+    
     public override void ApplyEffect()
     {
         if (GameController.Instance != null)
         {
             Debug.Log("Damage dealt: " + damageAmount);
-            GameController.Instance.enemyManager.DealDamageToCurrentEnemy(damageAmount);
+            GameController.Instance.enemyManager.DealDamageToCurrentEnemy(damageAmount, damageType);
         }
         else
         {

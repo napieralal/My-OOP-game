@@ -4,5 +4,7 @@ using UnityEngine;
 
 public interface IDamagable
 {
-    void TakeDamage(int damage);
+    void TakeDamage(int damage, DamageTypeSO damageType);
+    bool IsVulnerableTo(DamageTypeSO damageType);
+    bool IsResistantTo(DamageTypeSO damageType);
 }

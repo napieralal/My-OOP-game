@@ -15,9 +15,10 @@ MonoBehaviour:
   cardName: Fireball
   cardPrefab: {fileID: 345337910771762853, guid: b35908c1e6bcf8a43b4f05cecb1f8416, type: 3}
   cardImage: {fileID: 21300000, guid: 2d0997ac1b1fd664e98202450e7ea2d7, type: 3}
-  cardCost: 2
+  cardCost: 0
   cardDesc: ooooh Fireball!!
   cardAction: Attack +1<br>Fire Attack +1
-  cardSpecial: 5
+  cardSpecial: 0
   cardEffects:
+  - {fileID: 11400000, guid: 72a596f19eeb1dc4e8d172903fed4715, type: 2}
   - {fileID: 11400000, guid: fecffc2e84d015f48b044dc851917ac1, type: 2}

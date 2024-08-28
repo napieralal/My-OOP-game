@@ -19,4 +19,5 @@ MonoBehaviour:
   cardDesc: You recover your wounds!
   cardAction: Health +1
   cardSpecial: 0
-  cardEffects: []
+  cardEffects:
+  - {fileID: 11400000, guid: a4cfa5838984b6d46bde9e7014f7ed85, type: 2}

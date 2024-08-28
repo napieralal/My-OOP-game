@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ee84c56e9fc6a4a90d172bba1bc1cf, type: 3}
+  m_Name: Fire Damage Effect
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  damageType: {fileID: 11400000, guid: 5a50349037946474aa3549686d533293, type: 2}

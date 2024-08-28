@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamagable, IClickable
 {
     public EnemySO enemyData;
+    
     public HealthSystem baseHealthSystem;
     public HealthSystem healthSystem;
 
@@ -19,13 +20,34 @@ public class Enemy : MonoBehaviour, IDamagable, IClickable
 
     public void EnemyAttack()
     {
-        // Logika ataku wroga
+        Debug.Log(Player.Instance);
+        Player.Instance.TakeDamage(enemyData.enemyDamage, enemyData.damageType);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, DamageTypeSO damageType)
     {
+        if (IsVulnerableTo(damageType))
+        {
+            damage *= 2;
+            Debug.Log(gameObject.name + " is vulnerable to " + damageType + ", damage doubled to " + damage);
+        }
+        else if (IsResistantTo(damageType))
+        {
+            damage = 0;
+            Debug.Log(gameObject.name + " is resistant to " + damageType + ", no damage taken.");
+        }
         Debug.Log(gameObject.name + " taking " + damage + " damage.");
-        healthSystem.DecreaseHealth(damage);
+        healthSystem.DecreaseHealth(damage, damageType.isMagic);
+    }
+    
+    public bool IsVulnerableTo(DamageTypeSO damageType)
+    {
+        return enemyData.vulnerabilities != null && enemyData.vulnerabilities.Contains(damageType);
+    }
+
+    public bool IsResistantTo(DamageTypeSO damageType)
+    {
+        return enemyData.resistances != null && enemyData.resistances.Contains(damageType);
     }
     
     private void OnHealthChanged(int currentHealth)

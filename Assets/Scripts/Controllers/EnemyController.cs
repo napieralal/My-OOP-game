@@ -9,6 +9,35 @@ public class EnemyController : MonoBehaviour
     //bedzie wielu ich
     private List<Enemy> enemies = new List<Enemy>();
     private Enemy currentEnemy;
+    private int currentIndex = 0;
+    
+    private void Update()
+    {
+        HandleInput();
+    }
+
+    // Method to handle up and down arrow key input
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            // Move to the previous enemy in the list
+            if (currentIndex > 0)
+            {
+                currentIndex--;
+                SetCurrentEnemy(enemies[currentIndex]);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            // Move to the next enemy in the list
+            if (currentIndex < enemies.Count - 1)
+            {
+                currentIndex++;
+                SetCurrentEnemy(enemies[currentIndex]);
+            }
+        }
+    }
 
     public void SetCurrentEnemy(Enemy enemy)
     {
@@ -18,6 +47,7 @@ public class EnemyController : MonoBehaviour
         }
         
         currentEnemy = enemy;
+        currentIndex = enemies.IndexOf(currentEnemy);
         
         currentEnemy.healthSystem.SetCurrentBorderActive(true);
     }
@@ -44,13 +74,14 @@ public class EnemyController : MonoBehaviour
             enemies.Remove(enemy);
             Debug.Log(enemy.gameObject.name + " has been removed from the enemy list.");
             
-            if (index > 0)
+            if (index <= currentIndex)
             {
-                SetCurrentEnemy(enemies[index - 1]);
+                currentIndex = Mathf.Max(0, currentIndex - 1);
             }
-            else if (enemies.Count > 0)
+
+            if (enemies.Count > 0)
             {
-                SetCurrentEnemy(enemies[0]);
+                SetCurrentEnemy(enemies[currentIndex]);
             }
             else
             {
@@ -64,16 +95,26 @@ public class EnemyController : MonoBehaviour
         }
     }
     
-    public void DealDamageToCurrentEnemy(int damage)
+    public void DealDamageToCurrentEnemy(int damage, DamageTypeSO damageType)
     {
         if (currentEnemy != null)
         {
             Debug.Log("Dealing " + damage + " damage to current enemy: " + currentEnemy.gameObject.name);
-            currentEnemy.TakeDamage(damage);
+            currentEnemy.TakeDamage(damage, damageType);
         }
         else
         {
             Debug.LogWarning("No current enemy to deal damage to.");
+        }
+    }
+    
+    //deal damage to enemieS
+
+    public void DealDamageToPlayer()
+    {
+        foreach (Enemy enemy in enemies)
+        {
+            enemy.EnemyAttack();
         }
     }
 }
