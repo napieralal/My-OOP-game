@@ -6,7 +6,9 @@ public class Player : MonoBehaviour, IDamagable
 {
     public static Player Instance { get; private set; }
     
+    //moze nie SO bo data moze sie zmieniac
     public PlayerSO playerData;
+    //tu tak samo moze nie SO
     public HealthSystem healthSystem;
     void Awake()
     {

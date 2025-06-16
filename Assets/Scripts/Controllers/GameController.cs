@@ -89,6 +89,8 @@ public class GameController : Singleton<GameController>
         //EventSystem.current.SetSelectedGameObject (null);
     }
     
+    //damageovertime 
+    
     //player 
     //game turn
     //card effects
@@ -97,6 +99,9 @@ public class GameController : Singleton<GameController>
     //adding new cards to deck
     //visuals
     //item with revives you (very expensive max 1 maybe)
+    //enless tryb i moze jakis randomize deck albo draft
+    
+    //zestawy wrogow, lochow zapisane w pliku np. room01, room02, i w nim skeleton1, skeleton2, orc1, orc2, orc3
     
     // scene 0 - Menu
     // scene 1 - Base/City/Camp
