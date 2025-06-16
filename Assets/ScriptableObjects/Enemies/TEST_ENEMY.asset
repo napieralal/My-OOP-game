@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194387130c2ee394eaeedf5210e5c625, type: 3}
+  m_Name: TEST_ENEMY
+  m_EditorClassIdentifier: 
+  enemyName: Skeleton
+  enemyPrefab: {fileID: 7086113848539787783, guid: 96d1b2dc3ba61ba4bbdfcfd19cef5de2, type: 3}
+  enemySprite: {fileID: 0}
+  enemyDamage: 1
+  damageType: {fileID: 11400000, guid: 9d0251b659a3a994e9a3a6410f01cd66, type: 2}
+  vulnerabilities:
+  - {fileID: 11400000, guid: 5a50349037946474aa3549686d533293, type: 2}
+  - {fileID: 0}
+  resistances:
+  - {fileID: 11400000, guid: fda95f21b1b517b43ae778b89587d96d, type: 2}
