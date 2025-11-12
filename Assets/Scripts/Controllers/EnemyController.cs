@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    //tez moze byc boss moze on bedzie po prostu jako 3 wrogow i musisz go pokozac 3 razy,
-    //moze np. 2 wrogow to beda rece a pozniej cale cialo 
-    //bedzie wielu ich
     private List<Enemy> enemies = new List<Enemy>();
     private Enemy currentEnemy;
     private int currentIndex = 0;
@@ -16,7 +13,6 @@ public class EnemyController : MonoBehaviour
         HandleInput();
     }
 
-    // Method to handle up and down arrow key input
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
