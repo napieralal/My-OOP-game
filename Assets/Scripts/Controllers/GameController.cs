@@ -37,7 +37,6 @@ public class GameController : Singleton<GameController>
 
     void Update()
     {
-        //Moze do player'a
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -98,43 +97,4 @@ public class GameController : Singleton<GameController>
     //boss room
     //adding new cards to deck
     //visuals
-    //item with revives you (very expensive max 1 maybe)
-    //enless tryb i moze jakis randomize deck albo draft
-    
-    //zestawy wrogow, lochow zapisane w pliku np. room01, room02, i w nim skeleton1, skeleton2, orc1, orc2, orc3
-    
-    // scene 0 - Menu
-    // scene 1 - Base/City/Camp
-    // scene 2 - dungeon(with many rooms)
-    //scene manager (base and dungeons)
-    
-    // there is one big dungeon which contains of many rooms, ending with 
-   //boss, reward, or some mystery or quest. 
-    //room manager
-    
-    //enemy manager
-    
-    //card manager
-    //card deck, discard pile, 5 cards in hand
-    //cards from deck are going to their given positions animation + flip
-    //moze cos ze mozesz odrzucic karte i cos dostac, albo dobrac dodatkowa karte i cos stracic
-    //pytanie czy nie dodac jakiegos specjalnego czegos typu punkty mocy
-    //moze jakies zywioly kart lub kategorie (typu walka lub od ras)
-    //moze specjalne karty
-    //moze synergie kart łączace sie efekty
-    //potions, equipment, weapons/armor, something to improve your deck / cards / cards capabilities / synergies
-    //lochy / jaskinie / zamczyska / więzienia
-    //klikasz w drzwi, dostajesz prompt czy idziesz dalej, dajesz tak, otwieraja sie ekran zaczyna sie przygaszac,
-    //postac idzie w kierunku drzwi robi sie czarny ekran, tepujesz gracza do nastepnego lochu ustawiasz wrogow, loot
-    //pierwszy loch np. daje jakieś przedmioty na ten jeden run jakieś potki itp. po runie są usuwane, moze jakies buff
-    // runy czy cos takiego, znajdujesz w lochach i cie wzmacniaja na bossa itp.
-    //w miescie / hubie wybierasz gdzie chcesz isc do jakiego dungeona, wybierasz trudność potencjalnych wrogow
-    //i nagrody, jakies np. slabosci wrogow albo ze atakuja ogniem, poziomy trudnosci lochow
-    // endless mode z 1 zyciem grasz tak dlugo jak wytrzymasz, itemy zdobywasz podczas gry
-    // resource management
-    //lvl postaci i dostajesz karty do wyboru co lvl
-    //upgrade cards (slash - bloody slash - bloody double slash)
-    
-    
-    // Osobne funkcje np. generuj loch, generuj wroga/ow, najlepiej w innych plikach 
 }
